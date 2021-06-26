@@ -1,0 +1,103 @@
+root@ip-172-31-0-7:~/app# history 
+    1  docker ps
+    2  curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    3  ls -ltr /usr/local/bin/docker-compose
+    4  chmod 755 /usr/local/bin/docker-compose
+    5  docker-compose --version
+    6  docker ps -a
+    7  mkdir code
+    8  cd code/
+    9  vi docker-compose.yaml
+   10  docker-compose up -d
+   11  docker ps
+   12  cat docker-compose.yaml 
+   13  cd ../
+   14  mkdir workpress-deployment
+   15  cd workpress-deployment/
+   16  vi docker-compose.yaml
+   17  docker-compose up -d
+   18  vi docker-compose.yaml
+   19  docker-compose up -d
+   20  vi docker-compose.yaml
+   21  docker-compose up -d
+   22  docker ps
+   23  docker ps 
+   24  docker kill 21fb875e321b 51221ce96e76 1a6cf989b878 7c8d994f6269
+   25  docker ps 
+   26  docker ps -a
+   27  docker rm 51221ce96e76 21fb875e321b 1a6cf989b878 7c8d994f6269
+   28  docker ps -a
+   29  ip addr
+   30  docker swarm init --advertise-addr 172.31.0.7
+   31  docker node ls
+   32  docker service create -p 80:80 --name webserver nginx
+   33  docker ps 
+   34  docker service ls
+   35  docker service scale webserver=2
+   36  docker service ls
+   37  docker ps 
+   38  docker service scale webserver=3
+   39  docker service ls
+   40  dockerinspect webserver
+   41  docker inspect webserver
+   42  docker service ls
+   43  docker service scale webserver=4
+   44  docker ps 
+   45  netstat -ntlp
+   46  ip addr
+   47  docker service scale webserver=1
+   48  docker ps 
+   49  docker ps
+   50  docker inspect 296fded8419b
+   51  docker inspect 296fded8419b | less
+   52  ls -ltr
+   53  mkdir app
+   54  cd app/
+   55  vi app.py
+   56  vi requirements.txt
+   57  vi Dockerfile
+   58  vi docker-compose.yml
+   59  docker-compose up -d
+   60  docker service ls
+   61  docker-compose ps
+   62  netstat -ntlp
+   63  curl http://localhost:8000
+   64  ip addr
+   65  curl http://172.31.0.7:8000
+   66  docker-compose down --volumes
+   67  docker images
+   68  docker-compose push
+   69  docker login
+   70  vi docker-compose.yml 
+   71  docker-compose up -d
+   72  docker-compose down
+   73  docker-compose up -d
+   74  docker-compose ps
+   75  docker-compose down --volumes
+   76  docker-compose push
+   77  docker stack deploy --compose-file docker-compose.yml stackdemo
+   78  docker service ls
+   79  docker service stop at57pq7xd6i3
+   80  cat docker-compose.yml
+   81  docker-compose up -d
+   82  hisory
+   83  h
+   84  history 
+
+
+
+
+https://caylent.com/high-availability-docker-swarm-aws
+https://docs.docker.com/engine/swarm/stack-deploy/
+
+
+
+Node2 
+
+ubuntu@ip-172-31-61-146:~$ sudo su - 
+root@ip-172-31-61-146:~# 
+root@ip-172-31-61-146:~# 
+root@ip-172-31-61-146:~# docker swarm join --token SWMTKN-1-5yczsrbdb6p9md3ba1gsg16hm29ghetjv0bsn6hq0yrppeqeup-4hj1whc56slfi53hr1g1adepp 172.31.0.7:2377
+This node joined a swarm as a worker.
+root@ip-172-31-61-146:~# 
+
